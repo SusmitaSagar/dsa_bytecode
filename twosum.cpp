@@ -1,0 +1,39 @@
+// 5) Two sum problem:- Given an array of integers nums and an integer
+// target, return indices of the two numbers such that they add up to target. You may assume that
+// each input would have exactly one solution, and you may not use the same element twice. You
+// can return the answer in any order.
+#include <iostream> //bruteforce
+using namespace std;
+ void sum(int array[] , int size, int target){
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = i+1; j <size; j++) // ek bad se start ho k wps ek bad me ayege
+        {
+            if(array[i]+array[j]==target){
+                cout<<"the index are"<<i<<"and"<<j <<"\n";
+            }
+        }
+        
+    }
+    
+     
+ }
+
+int main()
+{
+    int n;
+    cout << "eneter the size of array";
+    cin >> n;
+    int arr[n];
+    cout << "eneter element of array";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+   int target;
+   cout<<"enter the target value";
+   cin>>target;
+    sum(arr,n,target);
+
+    return 0;
+}
